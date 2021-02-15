@@ -17,4 +17,6 @@
     <li><strong>Authors:</strong> {{ num_authors }}</li>
     <li><strong>Genres:</strong> {{ num_genres }}</li>
   </ul>
+  <br>
+  <p>You have visited the page {{ num_visits }} time{% if num_visits > 1 %}s{% endif %}.</p>
 {% endblock %}
