@@ -70,7 +70,7 @@ def index(request):
 
 class BookListView(generic.ListView):
     model = Book
-    # paginate_by = 3
+    paginate_by = 10
     # context_object_name = 'my_books_list' # your own name for the list as a template variable
 
 
@@ -80,7 +80,7 @@ class BookDetailView(generic.DetailView):
 
 class AuthorListView(generic.ListView):
     model = Author
-    # paginate_by = 3
+    paginate_by = 10
 
 
 class AuthorDetailView(generic.DetailView):
@@ -91,7 +91,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin, generic.ListView):
     """Generic class-based view listing books on loan to current user."""
     model = BookInstance
     template_name = 'catalog/bookinstance_list_borrowed_user.html'
-    paginate_by = 5
+    paginate_by = 10
 
     def get_queryset(self):
         return BookInstance.objects.filter(borrower=self.request.user).filter(status__exact='o').order_by('due_back')
@@ -122,7 +122,7 @@ def renew_book_librarian(request, pk):
         # Check if the form is valid:
         if form.is_valid():
             # process the data in form.cleaned_data as required ( here we just write it to the model due_back field)
-            book_instance.due_back = form.cleaned_data['renewal-date']
+            book_instance.due_back = form.cleaned_data['renewal_date']
             book_instance.save()
 
             # redirect to a new URL:
