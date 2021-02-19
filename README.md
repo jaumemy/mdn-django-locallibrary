@@ -1,8 +1,11 @@
-# Django Local Library
+# Local Library
+> A django-based online catalog for a small local library.             
 
-Tutorial "Local Library" website written in Django.
+## Live
+You can take a look clicking [here](https://mdn-django-locallibrary.herokuapp.com/catalog/).
 
-For detailed information about this project see the associated [MDN tutorial home page](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website).
+![](mdn_locallibrary.gif)
+
 
 ## Overview
 
@@ -18,21 +21,25 @@ The main features that have currently been implemented are:
 ![Local Library Model](https://raw.githubusercontent.com/mdn/django-locallibrary-tutorial/master/catalog/static/images/local_library_model_uml.png)
 
 
-## Quick Start
+## Technologies
 
-To get this project up and running locally on your computer:
-1. Set up the [Python development environment](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/development_environment).
-   We recommend using a Python virtual environment.
-1. Assuming you have Python setup, run the following commands (if you're on Windows you may use `py` or `py -3` instead of `python` to start Python):
-   ```
-   pip3 install -r requirements.txt
-   python3 manage.py makemigrations
-   python3 manage.py migrate
-   python3 manage.py collectstatic
-   python3 manage.py test # Run the standard tests. These should all pass.
-   python3 manage.py createsuperuser # Create a superuser
-   python3 manage.py runserver
-   ```
-1. Open a browser to `http://127.0.0.1:8000/admin/` to open the admin site
-1. Create a few test objects of each type.
-1. Open tab to `http://127.0.0.1:8000` to see the main site, with your new objects.
+For this project, I used **Django**, following Mdn step by step fundamentals.       
+It has been deployed on [Heroku](https://www.heroku.com/).
+
+
+
+## Motivation
+
+Before doing more ambitious projects and learn new things, I wanted to go back to the fundamentals, and study them as much as I could.                
+_I was following Mozilla Developer Network Tutorial [MDN Django Web Framework](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django)._
+
+
+## Meta
+                  
+JMontane – [jmontane.dev](https://www.jmontane.dev)
+
+
+Github profile [jaumemy](https://github.com/jaumemy/)
+
+
+Source code repo [Mdn](https://github.com/mdn/django-locallibrary-tutorial)
